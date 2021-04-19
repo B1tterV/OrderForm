@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Date range picker -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+</head>
+<body>
+    <div class="order">
+        <form action="" class="order-form" id="order">
+            <div class="order__header">
+                <div class="order__from">
+                    <div class="title">Откуда доставляем?</div>
+                    <div class="swap">
+                        <div class="swap__courier">
+                            <input type="radio" name="delivery-method" id="courier-from" value="1" checked>
+                            <label for="courier-from">Курьер</label>
+                        </div>
+                        <div class="swap__pickup-point">
+                            <input type="radio" name="delivery-method" id="pickup-from" value="2">
+                            <label for="pickup-from">Пункт выдачи</label>
+                        </div>
+                    </div>
+                    <div class="place-info place-info__from" id='courier-1'>
+                        <div class="place-info__top">
+                            <input type="text" placeholder="Город" required>
+                        </div>
+                        <div class="place-info__center">
+                            <input type="text" placeholder="Улица" required>
+                            <input type="text" placeholder="Дом" required>
+                        </div>
+                        <div class="place-info__bottom">
+                            <input type="text" placeholder="Кваритра" required>
+                            <input type="text" placeholder="Дополнительно" required>
+                        </div>
+                    </div>
+                    <div class="place-info place-info__from" id='courier-2'>
+                        <div class="place-info__top">
+                            <input type="text" placeholder="Город" required>
+                        </div>
+                        <div class="place-info__center">
+                            <select name="" id="" class="place-select">
+                                <option disabled selected>Пункт выдачи</option>
+                                <option value="">Москва дом 12 корпус 3</option>
+                                <option value="">Москва дом 7 корпус 1</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="order__to">
+                    <div class="title">Куда доставляем?</div>
+                    <div class="swap">
+                        <div class="swap__courier">
+                            <input type="radio" name="swap-to" id="" value="1" checked>
+                            Курьер
+                        </div>
+                        <div class="swap__pickup-point">
+                            <input type="radio" name="swap-to" id="" value="2">
+                            Пункт выдачи
+                        </div>
+                    </div>
+                    <div class="place-info place-info__to" id='swap-to-1'>
+                        <div class="place-info__top">
+                            <input type="text" placeholder="Город" required>
+                        </div>
+                        <div class="place-info__center">
+                            <input type="text" placeholder="Улица" required>
+                            <input type="text" placeholder="Дом" required>
+                        </div>
+                        <div class="place-info__bottom">
+                            <input type="text" placeholder="Кваритра" required>
+                            <input type="text" placeholder="Дополнительно" required>
+                        </div>
+                    </div>
+                    <div class="place-info place-info__to" id='swap-to-2'>
+                        <div class="place-info__top">
+                            <input type="text" placeholder="Город" required>
+                        </div>
+                        <div class="place-info__center">
+                            <select name="" id="" class="place-select">
+                                <option disabled selected>Пункт выдачи</option>
+                                <option value="">Москва дом 12 корпус 3</option>
+                                <option value="">Москва дом 7 корпус 1</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="order__body">
+                <div class="order__products">
+                    <div class="title">Что доставляем?</div>
+                    <div class="order__products_item">
+                        <div class="product-item">
+                            <div class="product-item__photo">
+                                <img src="img/product_1.png" alt="product">
+                            </div>
+                            <div class="product-item__value">
+                                <div class="product-item__value_minus" id="minus0">-</div>
+                                <div class="product-item__value_num" id="value0">0</div>
+                                <div class="product-item__value_plus" id="plus0">+</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order__products_item">
+                        <div class="product-item">
+                            <div class="product-item__photo">
+                                <img src="img/product_2.png" alt="product">
+                            </div>
+                            <div class="product-item__value">
+                                <div class="product-item__value_minus" id="minus1">-</div>
+                                <div class="product-item__value_num" id="value1">1</div>
+                                <div class="product-item__value_plus" id="plus1">+</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order__products_item">
+                        <div class="product-item">
+                            <div class="product-item__photo">
+                                <img src="img/product_3.png" alt="product">
+                            </div>
+                            <div class="product-item__value">
+                                <div class="product-item__value_minus" id="minus2">-</div>
+                                <div class="product-item__value_num" id="value2">0</div>
+                                <div class="product-item__value_plus" id="plus2">+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order__info">
+                    <div class="order__info_vacation-date">
+                        <div class="title">Даты отпуска:</div>
+                        <input type="text" class="data-input" name="datefilter" value="" placeholder="- / -" required/>
+                    </div>
+                    <div class="order__info_date-collection">
+                        <div class="title">Дата забора багажа:</div>
+                        <input type="text" class="data-input" name="datefilter" value="" placeholder="- / -" required/>
+                    </div>
+                    <div class="order__info_data">
+                        <div class="title">Данные:</div>
+                        <input type="text" placeholder="ФИО" required>
+                        <input type="tel" placeholder="Телефон" required>
+                        <input type="email" placeholder="Почта" required>
+                        <input type="password" placeholder="Пароль" required>
+                    </div>
+                </div>
+            </div>
+            <div class="order__footer">
+                <div class="title">Итоговая цена:</div>
+                <div class="order__footer_content">
+                    <div class="order__sum">
+                        <div class="total_sum">1 999 ₽</div>
+                    </div>
+                    <div class="order__close">
+                        <button class="btn close-form">Выйти</button>
+                    </div>
+                    <div class="order__confirm">
+                        <input type="submit" id="submit-order" value="Оплатить" >
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="order-payment">
+        <form action="" class="order-payment-form">
+            <div class="order-payment__card-number">
+                <div class="title">Номер карты:</div>
+                <input class="card-number-input" type="text" name="" id="" placeholder="0000 0000 0000 0000" required>
+            </div>
+            <div class="order-payment__card-data">
+                <div class="title">Срок действия и CVV2:</div>
+                <input class="small-input" type="text" name="" id="" placeholder="ММ/ГГ" maxlength="4" required>
+                <input class="small-input" type="text" name="" id="" placeholder="CVV2" maxlength="3" required>
+            </div>
+            <div class="order-payment__total-price">
+                <div class="title">Итоговая цена:</div>
+                <div class="order-payment__total-price_content">
+                    <div class="total_sum">1 999 ₽</div>
+                    <div class="order__confirm">
+                        <input type="submit" value="Оплатить">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

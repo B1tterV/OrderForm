@@ -1,0 +1,301 @@
+body{
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 23px;
+    background: black;
+    color: #181515;
+}
+
+.drp-buttons {
+    display: flex !important;
+    align-items: center;
+}
+
+input[type=text],
+input[type=tel],
+input[type=email],
+input[type=password]{
+    padding-left: 24px;
+    border-radius: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    height: 44px;
+    width: 100%;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 44px;
+    width: 100%;
+    padding: 0 24px;
+    background: transparent;
+    background-image: url(../img/icon/arrow.svg);
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+    background-position-y: 18px;
+    border-radius: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+
+input[type=submit],
+.btn{
+    cursor: pointer;
+    width: 176px;
+    height: 44px;
+    border: none;
+    background: #181515;
+    border-radius: 100px;
+    color: white;
+}
+
+input[name="datefilter"]{
+    cursor: pointer;
+    background: url(../img/icon/calendar.svg) no-repeat;
+    background-position: right 24px top 14px;
+}
+
+input[name="datefilter"] button{
+    width: 100px;
+}
+
+input:focus, select{
+    border: 1px solid #181515;
+    outline: none;
+}
+
+.title{
+    margin-bottom: 18px;
+    font-size: 22px;
+    line-height: 32px;
+}
+
+.order{
+    margin-left: auto;
+    margin-right: auto;
+    top: 100px;
+    left: 0;
+    right: 0;
+    max-width: 600px;
+    padding: 24px;
+    background: white;
+    box-shadow: 0px 24px 64px -12px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+}
+
+.order__header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.swap{
+    display: flex;
+}
+
+.swap__courier{
+    margin-right: 24px;
+}
+
+.place-info{
+    display: none;
+    margin-top: 18px;
+}
+
+#courier-1, #swap-to-1{
+    display: block;
+}
+
+.place-info__center{
+    display: flex;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.place-info__center input:first-child{
+    width: 144px;
+    margin-right: 8px;
+}
+
+.place-info__center input:last-child{
+    padding: 18px;
+}
+
+.place-info__bottom{
+    display: flex;
+}
+
+.place-info__bottom input:first-child{
+    width: 82px;
+    margin-right: 8px;
+}
+
+.place-info__bottom input{
+    padding-left: 9px;
+}
+
+.order__from, .order__to{
+    width: 225px;
+}
+
+.order__from .title, .order__to .title{
+    text-align: center;
+}
+
+.order__body{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+
+.product-item__photo{
+    width: 128px;
+    height: 128px;
+}
+
+.product-item{
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+}
+
+.product-item__value{
+    display: flex;
+    align-items: center;
+}
+
+.product-item__value_minus,
+.product-item__value_plus{
+    cursor: pointer;
+    font-size: 22px;
+    line-height: 32px;
+}
+
+.product-item__value_num{
+    margin: 0 18px;
+    font-size: 36px;
+    line-height: 52px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.order__products{
+    width: 229px;
+}
+
+.order__info{
+    width: 219px;
+}
+
+.order__info_date-collection{
+    margin-top: 24px;
+}
+
+.order__info_data{
+    margin-top: 24px;
+}
+
+.order__info_data input:not(:first-of-type){
+    margin-top: 12px;
+}
+
+.order__footer .title{
+    margin-bottom: 0;
+}
+
+.order__footer_content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order__sum .title{
+    margin-bottom: 0;
+}
+
+.total_sum{
+    font-size: 36px;
+    line-height: 52px;
+}
+
+.order-payment{
+    display: none;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 100px;
+    left: 0;
+    right: 0;
+    max-width: 600px;
+    padding: 24px 36px;
+    background: white;
+    box-shadow: 0px 24px 64px -12px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+}
+
+.card-number-input{
+    max-width: 308px;
+}
+
+.order-payment__card-data{
+    margin-top: 24px;
+}
+
+.small-input{
+    padding-left: 19px !important;
+    max-width: 88px;
+}
+
+.small-input:first-of-type{
+    margin-right: 12px;
+}
+
+.order-payment__total-price{
+    margin-top: 54px;
+}
+
+.order-payment__total-price .title{
+    margin-bottom: 0;
+}
+
+.order-payment__total-price_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 576px){
+    .order__header,
+    .order__body{
+        display: block;
+        text-align: -webkit-center;
+    }
+    .order__to{
+        margin-top: 24px;
+    }
+    .order__info_vacation-date{
+        margin-top: 24px;
+    }
+    .order__footer{
+        margin-top: 24px;
+        text-align: center;
+    }
+    .order__footer_content{
+        display: block;
+        text-align: center;
+    }
+    .order__close{
+        margin: 24px 0;
+    }
+    .order-payment{
+        text-align: center;
+    }
+    .order-payment__total-price_content{
+        display: block;
+    }
+    .order-payment__total-price_content .order__confirm{
+        margin-top: 24px;
+    }
+}

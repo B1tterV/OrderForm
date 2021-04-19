@@ -294,6 +294,14 @@ input:focus, select{
     align-items: center;
 }
 
+.suggestions-wrapper{
+    position: absolute;
+    background: white;
+    max-width: 300px;
+    box-shadow: 0px 24px 64px -12px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+}
+
 @media (max-width: 576px){
     .order__header,
     .order__body{
@@ -331,5 +339,12 @@ input:focus, select{
     }
     .order-payment__total-price_content .order__confirm{
         margin-top: 24px;
+    }
+
+    .suggestions-wrapper{
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

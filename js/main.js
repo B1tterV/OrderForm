@@ -23,8 +23,27 @@
         $(this).val('');
     });
 
-$(document).ready(function() {
+$(document).ready(function(){
+
     $("#phone").mask("+7 (999) 99-99-999");
+
+    $("#address").suggestions({
+        token: "5f7a47b94462b92b9c01e7d86c24a2e19b09cf63",
+        type: "ADDRESS",
+        /* Вызывается, когда пользователь выбирает одну из подсказок */
+        onSelect: function(suggestion) {
+            console.log(suggestion);
+        }
+    });
+
+    $("#address2").suggestions({
+        token: "5f7a47b94462b92b9c01e7d86c24a2e19b09cf63",
+        type: "ADDRESS",
+        /* Вызывается, когда пользователь выбирает одну из подсказок */
+        onSelect: function(suggestion) {
+            console.log(suggestion);
+        }
+    });
 
     $(".close-payment").click(function() {
         $( ".order-payment" ).hide("slow")
@@ -97,3 +116,40 @@ $(document).ready(function() {
     });
 
 });
+
+// WWW
+
+// Замените на свой API-ключ
+var token = "5f7a47b94462b92b9c01e7d86c24a2e19b09cf63";
+var $city = $("#city");
+
+// удаляет районы города и всё с 65 уровня
+function removeNonCity(suggestions) {
+  return suggestions.filter(function(suggestion) {
+    return suggestion.data.fias_level !== "5" && suggestion.data.fias_level !== "65";
+  });
+}
+
+function join(arr /*, separator */) {
+  var separator = arguments.length > 1 ? arguments[1] : ", ";
+  return arr.filter(function(n){return n}).join(separator);
+}
+
+function cityToString(address) {
+  return join([
+      join([address.city_type, address.city], " "),
+      join([address.settlement_type, address.settlement], " ")
+    ]);
+}
+
+// Ограничиваем область поиска от города до населенного пункта
+$city.suggestions({
+  token: token,
+  type: "ADDRESS",
+  hint: false,
+  count: 20,
+  geoLocation: false,
+  bounds: "city-settlement",
+  onSuggestionsFetch: removeNonCity
+});
+

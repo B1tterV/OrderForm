@@ -8,6 +8,14 @@ $(function() {
             cancelLabel: '- / -'
         }
     });
+
+    $(function() {
+        $('input[name="datepicker"]').daterangepicker({
+          singleDatePicker: true,
+          minYear: 1901,
+          maxYear: parseInt(moment().format('YYYY'),10)
+        })
+      });
   
     $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
         $(this).val(picker.startDate.format('DD.MM') + ' - ' + picker.endDate.format('DD.MM'));
@@ -75,17 +83,20 @@ $(function(){
 
 });
 
-$(document).ready(function() {
-    $("#order").validate({ 
-        submitHandler: function(form) {
-            $("#submit-order").click(function() {
-                $( ".order-payment" ).css("display","block");
-            });
-        }
-    });
-})
-
 $("#submit-order").click(function() {
     $( ".order" ).css("opacity", "0.5");
     $( ".order-payment" ).show("");
+});
+
+$(".close-order").click(function() {
+    $( ".order" ).hide("slow")
+});
+
+$(".close-payment").click(function() {
+    $( ".order-payment" ).hide("slow")
+    $( ".order" ).css("opacity", "");
+});
+
+$(document).ready(function() {
+    $("#phone").mask("+7 (999) 99-99-999");
 });

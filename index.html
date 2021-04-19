@@ -14,10 +14,15 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <!-- Phone mask -->
+    <script src="https://unpkg.com/jquery-input-mask-phone-number@1.0.0/dist/jquery-input-mask-phone-number.js"></script>
 </head>
 <body>
     <div class="order">
         <form action="" class="order-form" id="order">
+            <div class="close-form close-order">
+                <img src="img/icon/close.svg" alt="">
+            </div>
             <div class="order__header">
                 <div class="order__from">
                     <div class="title">Откуда доставляем?</div>
@@ -33,24 +38,24 @@
                     </div>
                     <div class="place-info place-info__from" id='courier-1'>
                         <div class="place-info__top">
-                            <input type="text" placeholder="Город" required>
+                            <input type="text" placeholder="Город *" required>
                         </div>
                         <div class="place-info__center">
-                            <input type="text" placeholder="Улица" required>
-                            <input type="text" placeholder="Дом" required>
+                            <input type="text" placeholder="Улица *" required>
+                            <input type="text" placeholder="Дом *" required>
                         </div>
                         <div class="place-info__bottom">
-                            <input type="text" placeholder="Кваритра" required>
-                            <input type="text" placeholder="Дополнительно" required>
+                            <input type="text" placeholder="Кваритра *" required>
+                            <input type="text" placeholder="Дополнительно *" required>
                         </div>
                     </div>
                     <div class="place-info place-info__from" id='courier-2'>
                         <div class="place-info__top">
-                            <input type="text" placeholder="Город" required>
+                            <input type="text" placeholder="Город *" required>
                         </div>
                         <div class="place-info__center">
                             <select name="" id="" class="place-select">
-                                <option disabled selected>Пункт выдачи</option>
+                                <option disabled selected>Пункт выдачи *</option>
                                 <option value="">Москва дом 12 корпус 3</option>
                                 <option value="">Москва дом 7 корпус 1</option>
                             </select>
@@ -71,24 +76,24 @@
                     </div>
                     <div class="place-info place-info__to" id='swap-to-1'>
                         <div class="place-info__top">
-                            <input type="text" placeholder="Город" required>
+                            <input type="text" placeholder="Город *" required>
                         </div>
                         <div class="place-info__center">
-                            <input type="text" placeholder="Улица" required>
-                            <input type="text" placeholder="Дом" required>
+                            <input type="text" placeholder="Улица *" required>
+                            <input type="text" placeholder="Дом *" required>
                         </div>
                         <div class="place-info__bottom">
-                            <input type="text" placeholder="Кваритра" required>
-                            <input type="text" placeholder="Дополнительно" required>
+                            <input type="text" placeholder="Кваритра *" required>
+                            <input type="text" placeholder="Дополнительно *" required>
                         </div>
                     </div>
                     <div class="place-info place-info__to" id='swap-to-2'>
                         <div class="place-info__top">
-                            <input type="text" placeholder="Город" required>
+                            <input type="text" placeholder="Город *" required>
                         </div>
                         <div class="place-info__center">
                             <select name="" id="" class="place-select">
-                                <option disabled selected>Пункт выдачи</option>
+                                <option disabled selected>Пункт выдачи *</option>
                                 <option value="">Москва дом 12 корпус 3</option>
                                 <option value="">Москва дом 7 корпус 1</option>
                             </select>
@@ -143,34 +148,34 @@
                     </div>
                     <div class="order__info_date-collection">
                         <div class="title">Дата забора багажа:</div>
-                        <input type="text" class="data-input" name="datefilter" value="" placeholder="- / -" required/>
+                        <input type="text" class="data-input" name="datepicker" value="" placeholder="- / -" required/>
                     </div>
                     <div class="order__info_data">
                         <div class="title">Данные:</div>
-                        <input type="text" placeholder="ФИО" required>
-                        <input type="tel" placeholder="Телефон" required>
-                        <input type="email" placeholder="Почта" required>
-                        <input type="password" placeholder="Пароль" required>
+                        <input type="text" placeholder="ФИО *" required>
+                        <input id="phone" type="text" placeholder="Телефон *" required>
+                        <input type="email" placeholder="Почта *" required>
+                        <input type="password" placeholder="Пароль *" required>
                     </div>
                 </div>
             </div>
             <div class="order__footer">
-                <div class="title">Итоговая цена:</div>
-                <div class="order__footer_content">
+                <div class="order__footer_price">
+                    <div class="title">Итоговая цена:</div>
                     <div class="order__sum">
                         <div class="total_sum">1 999 ₽</div>
                     </div>
-                    <div class="order__close">
-                        <button class="btn close-form">Выйти</button>
-                    </div>
-                    <div class="order__confirm">
-                        <input type="submit" id="submit-order" value="Оплатить" >
-                    </div>
+                </div>
+                <div class="order__confirm">
+                    <input type="submit" id="submit-order" value="Оплатить" >
                 </div>
             </div>
         </form>
     </div>
     <div class="order-payment">
+        <div class="close-form close-payment">
+            <img src="img/icon/close.svg" alt="">
+        </div>
         <form action="" class="order-payment-form">
             <div class="order-payment__card-number">
                 <div class="title">Номер карты:</div>
@@ -193,5 +198,7 @@
         </form>
     </div>
     <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
 </body>
 </html>

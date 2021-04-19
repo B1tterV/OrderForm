@@ -42,7 +42,7 @@ select {
 input[type=submit],
 .btn{
     cursor: pointer;
-    width: 176px;
+    width: 219px;
     height: 44px;
     border: none;
     background: #181515;
@@ -50,19 +50,33 @@ input[type=submit],
     color: white;
 }
 
-input[name="datefilter"]{
+input[name="datefilter"],
+input[name="datepicker"]{
     cursor: pointer;
     background: url(../img/icon/calendar.svg) no-repeat;
     background-position: right 24px top 14px;
 }
 
-input[name="datefilter"] button{
-    width: 100px;
+.btn-sm{
+    width: 100px !important;
+}
+
+.drp-calendar select{
+    padding-left: 5px !important;
+    background-position-x: 80%;
+    background-position-y: 8px;
 }
 
 input:focus, select{
     border: 1px solid #181515;
     outline: none;
+}
+
+.close-form{
+    cursor: pointer;
+    position: absolute;
+    top: 11px;
+    right: 15px;
 }
 
 .title{
@@ -72,13 +86,14 @@ input:focus, select{
 }
 
 .order{
+    position: relative;
     margin-left: auto;
     margin-right: auto;
     top: 100px;
     left: 0;
     right: 0;
     max-width: 600px;
-    padding: 24px;
+    padding: 46px 24px 17px 24px;
     background: white;
     box-shadow: 0px 24px 64px -12px rgba(0, 0, 0, 0.1);
     border-radius: 30px;
@@ -174,6 +189,7 @@ input:focus, select{
 }
 
 .product-item__value_num{
+    width: 20px;
     margin: 0 18px;
     font-size: 36px;
     line-height: 52px;
@@ -200,15 +216,27 @@ input:focus, select{
     margin-top: 12px;
 }
 
+.order__footer{
+    margin-top: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order__footer .total_sum{
+    font-size: 24px;
+    line-height: 35px;
+}
+
 .order__footer .title{
+    margin-right: 16px;
+    font-size: 24px;
+    line-height: 35px;
     margin-bottom: 0;
 }
 
-.order__footer_content{
+.order__footer_price{
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .order__sum .title{
@@ -279,12 +307,18 @@ input:focus, select{
         margin-top: 24px;
     }
     .order__footer{
+        display: block;
         margin-top: 24px;
         text-align: center;
     }
-    .order__footer_content{
+    .order__footer_price{
         display: block;
+        margin-bottom: 24px;
         text-align: center;
+    }
+
+    .order__footer .title{
+        margin-right: 0;
     }
     .order__close{
         margin: 24px 0;

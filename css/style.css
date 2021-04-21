@@ -42,7 +42,7 @@ select {
 input[type=submit],
 .btn{
     cursor: pointer;
-    width: 219px;
+    width: 240px;
     height: 44px;
     border: none;
     background: #181515;
@@ -142,7 +142,7 @@ input:focus, select{
 }
 
 .place-info__bottom input:first-child{
-    width: 82px;
+    width: 92px;
     margin-right: 8px;
 }
 
@@ -151,7 +151,7 @@ input:focus, select{
 }
 
 .order__from, .order__to{
-    width: 225px;
+    width: 245px;
 }
 
 .order__from .title, .order__to .title{
@@ -197,11 +197,11 @@ input:focus, select{
 }
 
 .order__products{
-    width: 229px;
+    width: 239px;
 }
 
 .order__info{
-    width: 219px;
+    width: 240px;
 }
 
 .order__info_date-collection{

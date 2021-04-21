@@ -8,6 +8,10 @@ body{
     color: #181515;
 }
 
+.daterangepicker td.active{
+    background-color: #181515 !important;
+}
+
 .drp-buttons {
     display: flex !important;
     align-items: center;

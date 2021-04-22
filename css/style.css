@@ -8,8 +8,12 @@ body{
     color: #181515;
 }
 
-.end-date{
+.today.active{
     background-color: #181515 !important;
+}
+
+.end-date, .start-date{
+    background-color: #357ebd !important;
 }
 
 .drp-buttons {

@@ -8,11 +8,11 @@ body{
     color: #181515;
 }
 
-.today.active{
+.daterangepicker td.start-date.end-date{
     background-color: #181515 !important;
 }
 
-.end-date, .start-date{
+.today.active{
     background-color: #357ebd !important;
 }
 

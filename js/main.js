@@ -114,7 +114,6 @@ $(document).ready(function(){
         $('#minus1').bind('click', {increment: -1}, incrementValue);
     
     });
-
 });
 
 // WWW

@@ -16,6 +16,10 @@ body{
     background-color: #357ebd !important;
 }
 
+.today.active.off{
+    background-color: transparent !important;
+}
+
 .drp-buttons {
     display: flex !important;
     align-items: center;

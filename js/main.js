@@ -11,7 +11,7 @@
     $('input[name="datefilter"]').daterangepicker({
         autoUpdateInput: false,
         locale: {
-            cancelLabel: '- / -'
+            cancelLabel: 'Cancel'
         }
     });
 
@@ -21,6 +21,8 @@
   
     $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
         $(this).val('');
+        picker.setStartDate(moment());
+        picker.setEndDate('');
     });
 
 $(document).ready(function(){

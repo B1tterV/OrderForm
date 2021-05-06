@@ -12,7 +12,7 @@
         autoUpdateInput: false,
         locale: {
             cancelLabel: 'Cancel'
-        }
+        },
     });
 
     $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
@@ -21,8 +21,9 @@
   
     $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
         $(this).val('');
+        $(".active").addClass();
         picker.setStartDate(moment());
-        picker.setEndDate('');
+        picker.setEndDate(moment());
     });
 
 $(document).ready(function(){
